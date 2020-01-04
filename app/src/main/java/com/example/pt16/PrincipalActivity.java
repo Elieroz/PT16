@@ -110,20 +110,31 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         int id = v.getId();
 
         if (id == R.id.btnLoadInfo) {
-            Toast.makeText(this, "OMG BEGINNING", Toast.LENGTH_SHORT).show();
-            new PrincipalActivity.Descarregador().execute();
+            String city = this.edtCity.getText().toString();
+            new PrincipalActivity.Descarregador().execute(city);
         }
     }
 
-    class Descarregador extends AsyncTask<String, Boolean, String> {
+    class Descarregador extends AsyncTask<String, Boolean, Descarregador.Result> {
+        class Result {
+            boolean isError;
+            String message;
+
+            public Result(boolean isError, String message) {
+                this.isError = isError;
+                this.message = message;
+            }
+        }
+
         // TODO Si tot va bé es retorna un ArrayList<String> amb el contingut; si no, null.
         @Override
-        protected String doInBackground(String... strings) {
+        protected Result doInBackground(String... strings) {
+            String city = strings[0];
             try {
                 // TODO Noms més descriptius?
                 // TODO En comptes de London posar la ciutat, i en comptes d'uk posar...?
                 //  Ah, doncs només amb London funciona igual.
-                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=" + PrincipalActivity.API_KEY);
+                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + PrincipalActivity.API_KEY);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 // https://www.codejava.net/java-se/networking/how-to-use-java-urlconnection-and-httpurlconnection
@@ -144,23 +155,18 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                     while ((line = bufferedReader.readLine()) != null) {
                         stringBuilder.append(line);
                     }
-                    return stringBuilder.toString();
+                    return new Result(false, stringBuilder.toString());
                 } else {
-                    return "!= HTTP_OK";
+                    return new Result(true, "Invalid HTTP request. City noy found?");
                 }
             } catch (IOException e) {
-//                return null;
-                return e.getMessage();
+                return new Result(true, e.getMessage());
             }
         }
 
         @Override
-        protected void onPostExecute(String s) {
-            if (s == null) {
-                edtCity.setText("ERROR");
-            } else {
-                edtCity.setText(s);
-            }
+        protected void onPostExecute(Result r) {
+            Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
         }
     }
 }

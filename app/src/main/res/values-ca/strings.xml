@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PT16</string>
+    <string name="action_settings">Ajustaments</string>
+    <string name="search">Buscar</string>
+</resources>
