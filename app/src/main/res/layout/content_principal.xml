@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context=".PrincipalActivity"
+    tools:showIn="@layout/activity_principal">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -20,11 +20,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:id="@+id/edtCity"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.25" />
+            android:layout_weight="1.25"
+
+            android:inputType="text"/>
 
         <Button
+            android:id="@+id/btnLoadInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.75"

@@ -15,10 +15,10 @@ public class MyAdapter extends RecyclerView.Adapter {
     private List<String> values;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView txtHeader;
-        public TextView txtFooter;
+        TextView txtHeader;
+        TextView txtFooter;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.txtHeader = itemView.findViewById(R.id.firstLine);
@@ -52,7 +52,7 @@ public class MyAdapter extends RecyclerView.Adapter {
         ((ViewHolder)holder).txtHeader.setText("?" + name);
 //        holder.txtHeader.setOnClickListener();
 
-        holder.txtFooter.setText("Footer: " + name);
+        ((ViewHolder)holder).txtFooter.setText("Footer: " + name);
     }
 
     @Override
