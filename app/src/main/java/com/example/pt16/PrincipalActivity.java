@@ -19,12 +19,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PrincipalActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -111,16 +114,44 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
         if (id == R.id.btnLoadInfo) {
             String city = this.edtCity.getText().toString();
-            new PrincipalActivity.Descarregador().execute(city);
+
+            // TODO Context? getApplicationContext o getBaseContext?
+            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
+            if (temperaturesHelper.estaCiutatDescarregada(city)) {
+                Toast.makeText(this, "Llegint de la base de dades... TODO", Toast.LENGTH_SHORT).show();
+                // TODO
+            } else {
+                Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
+                new PrincipalActivity.Descarregador().execute(city);
+            }
         }
     }
 
+    // TODO Moure el mètode a TemperaturesHelper o algo?
+    private void onXmlDownloaded(String nomCiutat, String xml) {
+        Parsejador parsejador = new Parsejador();
+
+        try {
+            List<Bloc> blocs = parsejador.parseja(xml);
+
+            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
+            temperaturesHelper.guarda(nomCiutat, blocs);
+            Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
+        } catch (XmlPullParserException | IOException e) {
+            Toast.makeText(this, "Error parsejant XML", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // TODO Boolean? Buenu, es pot fer un Progress Spinner mentre busca o algo.
+    // TODO Constructor amb Context context?
     class Descarregador extends AsyncTask<String, Boolean, Descarregador.Result> {
+        private String nomCiutat;
+
         class Result {
             boolean isError;
             String message;
 
-            public Result(boolean isError, String message) {
+            Result(boolean isError, String message) {
                 this.isError = isError;
                 this.message = message;
             }
@@ -128,13 +159,13 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
         // TODO Si tot va bé es retorna un ArrayList<String> amb el contingut; si no, null.
         @Override
-        protected Result doInBackground(String... strings) {
-            String city = strings[0];
+        protected Result doInBackground(String... nomCiutats) {
+            this.nomCiutat = nomCiutats[0];
             try {
                 // TODO Noms més descriptius?
                 // TODO En comptes de London posar la ciutat, i en comptes d'uk posar...?
                 //  Ah, doncs només amb London funciona igual.
-                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + PrincipalActivity.API_KEY);
+                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + this.nomCiutat + "&mode=xml" + "&APPID=" + PrincipalActivity.API_KEY);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 // https://www.codejava.net/java-se/networking/how-to-use-java-urlconnection-and-httpurlconnection
@@ -166,7 +197,11 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
         @Override
         protected void onPostExecute(Result r) {
-            Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
+            if (r.isError) {
+                Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
+            } else {
+                onXmlDownloaded(this.nomCiutat, r.message);
+            }
         }
     }
 }
