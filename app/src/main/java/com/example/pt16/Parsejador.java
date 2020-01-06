@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Parsejador {
-    public List<Bloc> parseja(String xml) throws XmlPullParserException, IOException {
-        List<Bloc> blocs = new ArrayList<>();
+    public ArrayList<Bloc> parseja(String xml) throws XmlPullParserException, IOException {
+        ArrayList<Bloc> blocs = new ArrayList<>();
 
         XmlPullParserFactory xmlPullParserFactory = XmlPullParserFactory.newInstance();
         // TODO A dos webs posen això.
@@ -30,8 +30,11 @@ public class Parsejador {
         while (eventType != XmlPullParser.END_DOCUMENT) {
             if (eventType == XmlPullParser.START_TAG) {
                 String tagName = xmlPullParser.getName();
+                Log.d("Parsejador", tagName);
 
                 if (tagName.equals("time")) {
+                    Log.d("Parsejador", "<time>");
+
                     // TODO Guardar hores per a saber de quina franja de temps són les tags següents.
                     horaInici = xmlPullParser.getAttributeValue(null, "from");
                 } else if (tagName.equals("temperature")) {
@@ -44,9 +47,12 @@ public class Parsejador {
                 String tagName = xmlPullParser.getName();
 
                 if (tagName.equals("time")) {
+                    Log.d("Parsejador", "</time>");
+
                     if (horaInici == null || temperatura == null) {
                         System.exit(666);
                     }
+                    Log.d("Parsejador", horaInici + " -> " + temperatura);
                     blocs.add(new Bloc(horaInici, temperatura));
                     horaInici = null;
                     temperatura = null;

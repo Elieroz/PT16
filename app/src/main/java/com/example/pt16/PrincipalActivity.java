@@ -11,7 +11,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,9 +40,11 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
     //  El fragment mirarà la base de dades i blabla.
 
     private RecyclerView blocRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.Adapter tAdapter;
+    private RecyclerView.Adapter<BlocAdapter.BlocViewHolder> blocViewHolderAdapter;
+//    private RecyclerView.Adapter tAdapter;
     private RecyclerView.LayoutManager layoutManager;
+
+    private ArrayList<Bloc> blocs;
 
     private EditText edtCity;
     private Button btnLoadInfo;
@@ -64,25 +65,26 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             }
         });
 
+        this.initializeBlocRecyclerView();
+    }
 
+    private void initializeBlocRecyclerView() {
         this.blocRecyclerView = findViewById(R.id.bloc_recycler_view);
         // La llista no canvia en runtime; mateixa mida.
         this.blocRecyclerView.setHasFixedSize(true);
 
         this.layoutManager = new LinearLayoutManager(this);
+
+        // Create an empty Adapter - there's no info yet.
+        this.blocs = new ArrayList<>();
+        this.blocViewHolderAdapter = new BlocAdapter(this.blocs);
+
         this.blocRecyclerView.setLayoutManager(this.layoutManager);
-
-        ArrayList<String> input = new ArrayList<>();
-        for (int i = 0; i < 100; i += 1) {
-            input.add("Test_" + i);
-        }
-
-//        this.mAdapter = new MyAdapter(input);
-        this.blocRecyclerView.setAdapter(this.mAdapter);
+        this.blocRecyclerView.setAdapter(this.blocViewHolderAdapter);
 
         this.edtCity = findViewById(R.id.edtCity);
 
-        this.btnLoadInfo = findViewById(R.id.btnLoadInfo);
+        this.btnLoadInfo = findViewById(R.id.btnSearch);
         this.btnLoadInfo.setOnClickListener(this);
     }
 
@@ -112,7 +114,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         int id = v.getId();
 
-        if (id == R.id.btnLoadInfo) {
+        if (id == R.id.btnSearch) {
             String city = this.edtCity.getText().toString();
 
             // TODO Context? getApplicationContext o getBaseContext?
@@ -132,7 +134,8 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         Parsejador parsejador = new Parsejador();
 
         try {
-            List<Bloc> blocs = parsejador.parseja(xml);
+            ArrayList<Bloc> blocs = parsejador.parseja(xml);
+            this.fillBlocRecyclerView(blocs);
 
             TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
             temperaturesHelper.guarda(nomCiutat, blocs);
@@ -140,6 +143,16 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         } catch (XmlPullParserException | IOException e) {
             Toast.makeText(this, "Error parsejant XML", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void onDataLoadedFromDatabase(ArrayList<Bloc> blocs) {
+
+    }
+
+    private void fillBlocRecyclerView(ArrayList<Bloc> blocs) {
+        this.blocs.clear();
+        this.blocs.addAll(blocs);
+        this.blocViewHolderAdapter.notifyDataSetChanged();
     }
 
     // TODO Boolean? Buenu, es pot fer un Progress Spinner mentre busca o algo.
@@ -165,7 +178,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                 // TODO Noms més descriptius?
                 // TODO En comptes de London posar la ciutat, i en comptes d'uk posar...?
                 //  Ah, doncs només amb London funciona igual.
-                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + this.nomCiutat + "&mode=xml" + "&APPID=" + PrincipalActivity.API_KEY);
+                URL url = new URL("http://api.openweathermap.org/data/2.5/forecast?q=" + this.nomCiutat + "&mode=xml&APPID=" + PrincipalActivity.API_KEY);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 // https://www.codejava.net/java-se/networking/how-to-use-java-urlconnection-and-httpurlconnection
@@ -200,6 +213,8 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             if (r.isError) {
                 Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
             } else {
+                Toast.makeText(PrincipalActivity.this, "Descàrrega OK, presentant info...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
                 onXmlDownloaded(this.nomCiutat, r.message);
             }
         }
