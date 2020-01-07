@@ -70,7 +70,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
     private void initializeBlocRecyclerView() {
         this.blocRecyclerView = findViewById(R.id.bloc_recycler_view);
-        // La llista no canvia en runtime; mateixa mida.
+        // La llista no canvia en runtime; mateixa mida. TODO I quan la buido i torno a omplir?
         this.blocRecyclerView.setHasFixedSize(true);
 
         this.layoutManager = new LinearLayoutManager(this);

@@ -34,7 +34,11 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
 
         holder.hourBegin.setText(bloc.getHourBegin());
         holder.temperature.setText(Double.toString(bloc.getTemperature()));
-//        holder.icon.setImageResource(bloc.getImageResource());
+        if (bloc.isCold()) {
+            holder.icon.setImageResource(R.drawable.cold);
+        } else {
+            holder.icon.setImageResource(R.drawable.hot);
+        }
     }
 
     @Override
@@ -45,14 +49,14 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
     public static class BlocViewHolder extends RecyclerView.ViewHolder {
         public TextView hourBegin;
         public TextView temperature;
-//        public ImageView icon;
+        public ImageView icon;
 
         public BlocViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.hourBegin = itemView.findViewById(R.id.hourBegin);
             this.temperature = itemView.findViewById(R.id.temperature);
-//            this.icon = itemView.findViewById(R.id.icon);
+            this.icon = itemView.findViewById(R.id.icon);
         }
     }
 }
