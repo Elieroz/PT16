@@ -8,15 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TemperaturesHelper extends SQLiteOpenHelper {
+    private static final String CREATE_TABLE = "CREATE TABLE horesTemperatures (TODO)";
+    private static final String INSERT_TEMPERATURA_HORA = "INSERT INTO horesTemperatures ...";
 
-    public TemperaturesHelper(Context context) {
+    TemperaturesHelper(Context context) {
         // TODO Versió? Ni idea de què vol dir.
         super(context, "temperatures", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(TemperaturesHelper.CREATE_TABLE);
     }
 
     @Override
@@ -24,11 +26,11 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean estaCiutatDescarregada(String nomCiutat) {
+    boolean estaCiutatDescarregada(String nomCiutat) {
         return false;
     }
 
-    public void guarda(String nomCiutat, List<Bloc> blocs) {
+    void guarda(String nomCiutat, List<Bloc> blocs) {
 
     }
 
