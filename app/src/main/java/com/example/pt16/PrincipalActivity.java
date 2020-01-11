@@ -8,8 +8,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 import android.view.Menu;
@@ -23,10 +21,10 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PrincipalActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,13 +36,6 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
     // TODO Posar les temperatures i tal a un fragment dinàmic. Li haurem de passar la ciutat.
     //  El fragment mirarà la base de dades i blabla.
-
-    private RecyclerView blocRecyclerView;
-    private RecyclerView.Adapter<BlocAdapter.BlocViewHolder> blocViewHolderAdapter;
-//    private RecyclerView.Adapter tAdapter;
-    private RecyclerView.LayoutManager layoutManager;
-
-    private ArrayList<Bloc> blocs;
 
     private EditText edtCity;
     private Button btnLoadInfo;
@@ -65,27 +56,12 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             }
         });
 
-        this.initializeBlocRecyclerView();
-    }
-
-    private void initializeBlocRecyclerView() {
-        this.blocRecyclerView = findViewById(R.id.bloc_recycler_view);
-        // La llista no canvia en runtime; mateixa mida. TODO I quan la buido i torno a omplir?
-        this.blocRecyclerView.setHasFixedSize(true);
-
-        this.layoutManager = new LinearLayoutManager(this);
-
-        // Create an empty Adapter - there's no info yet.
-        this.blocs = new ArrayList<>();
-        this.blocViewHolderAdapter = new BlocAdapter(this.blocs);
-
-        this.blocRecyclerView.setLayoutManager(this.layoutManager);
-        this.blocRecyclerView.setAdapter(this.blocViewHolderAdapter);
-
         this.edtCity = findViewById(R.id.edtCity);
 
         this.btnLoadInfo = findViewById(R.id.btnSearch);
         this.btnLoadInfo.setOnClickListener(this);
+
+//        this.initializeBlocRecyclerView();
     }
 
     @Override
@@ -124,18 +100,19 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                 // TODO
             } else {
                 Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
-                new PrincipalActivity.Descarregador().execute(city);
+                new PrincipalActivity.Descarregador(this).execute(city);
             }
         }
     }
 
     // TODO Moure el mètode a TemperaturesHelper o algo?
-    private void onXmlDownloaded(String nomCiutat, String xml) {
+    void onXmlDownloaded(String nomCiutat, String xml) {
         Parsejador parsejador = new Parsejador();
 
         try {
             ArrayList<Bloc> blocs = parsejador.parseja(xml);
-            this.fillBlocRecyclerView(blocs);
+//            this.fillBlocRecyclerView(blocs);
+            this.createBlocListFragment(blocs);
 
             TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
             temperaturesHelper.guarda(nomCiutat, blocs);
@@ -149,15 +126,22 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-    private void fillBlocRecyclerView(ArrayList<Bloc> blocs) {
-        this.blocs.clear();
-        this.blocs.addAll(blocs);
-        this.blocViewHolderAdapter.notifyDataSetChanged();
+    private void createBlocListFragment(ArrayList<Bloc> blocs) {
+        BlocListFragment blocListFragment = BlocListFragment.newInstance(blocs);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.temperatures_hores_fragment, blocListFragment)
+                .commit()
+        ;
     }
 
     // TODO Boolean? Buenu, es pot fer un Progress Spinner mentre busca o algo.
     // TODO Constructor amb Context context?
-    class Descarregador extends AsyncTask<String, Boolean, Descarregador.Result> {
+    static class Descarregador extends AsyncTask<String, Boolean, Descarregador.Result> {
+        // TODO Perquè la classe pugui ser estàtica i no tingui referències chungas de l'activitat.
+        //  https://stackoverflow.com/questions/44309241/warning-this-asynctask-class-should-be-static-or-leaks-might-occur
+        private WeakReference<PrincipalActivity> principalActivity;
         private String nomCiutat;
 
         class Result {
@@ -170,12 +154,14 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             }
         }
 
-        // TODO Si tot va bé es retorna un ArrayList<String> amb el contingut; si no, null.
+        Descarregador(PrincipalActivity principalActivity) {
+            this.principalActivity = new WeakReference<>(principalActivity);
+        }
+
         @Override
         protected Result doInBackground(String... nomCiutats) {
             this.nomCiutat = nomCiutats[0];
             try {
-                // TODO Noms més descriptius?
                 // TODO En comptes de London posar la ciutat, i en comptes d'uk posar...?
                 //  Ah, doncs només amb London funciona igual.
                 URL url = new URL("http://api.openweathermap.org/data/2.5/forecast?q=" + this.nomCiutat + "&mode=xml&APPID=" + PrincipalActivity.API_KEY);
@@ -184,14 +170,13 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                 // https://www.codejava.net/java-se/networking/how-to-use-java-urlconnection-and-httpurlconnection
                 // Note that when the header fields are read, the connection is implicitly established,
                 // without calling connect().
-//        httpURLConnection.connect();
+                // httpURLConnection.connect();
 
                 // TODO Mirem l'HTTP response code per a veure si ha anat bé o malament i per a fer el connect de pas?
                 int responseCode = httpURLConnection.getResponseCode();
 
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
-                    // TODO Ara cada línia que es llegeixi tindrà la info per a crear Blocs?
 
                     StringBuilder stringBuilder = new StringBuilder();
 
@@ -211,11 +196,11 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         @Override
         protected void onPostExecute(Result r) {
             if (r.isError) {
-                Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(PrincipalActivity.this, "Descàrrega OK, presentant info...", Toast.LENGTH_SHORT).show();
-                Toast.makeText(PrincipalActivity.this, r.message, Toast.LENGTH_SHORT).show();
-                onXmlDownloaded(this.nomCiutat, r.message);
+                Toast.makeText(this.principalActivity.get(), "Descàrrega OK, presentant info...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
+                this.principalActivity.get().onXmlDownloaded(this.nomCiutat, r.message);
             }
         }
     }
