@@ -3,4 +3,6 @@
     <string name="app_name">PT16</string>
     <string name="action_settings">Settings</string>
     <string name="search">Search</string>
+    <string name="download">Download</string>
+    <string name="download_format">Download format</string>
 </resources>

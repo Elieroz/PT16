@@ -38,11 +38,11 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/bloc_recycler_view"
+    <FrameLayout
+        android:id="@+id/temperatures_hores_fragment"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp"/>
 
+        android:layout_marginTop="16dp" />
 </LinearLayout>

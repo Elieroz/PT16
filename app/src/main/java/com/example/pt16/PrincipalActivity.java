@@ -1,5 +1,7 @@
 package com.example.pt16;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -8,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import android.view.View;
 import android.view.Menu;
@@ -29,6 +32,8 @@ import java.util.ArrayList;
 public class PrincipalActivity extends AppCompatActivity implements View.OnClickListener {
 
     final static String API_KEY = "39a7209b1611d9c3c5cc2dc170c63323";
+
+    final static String DEFAULT_DOWNLOAD_FORMAT = "JSON";
 
     // TODO Ciutat no trobada -> Toast
 
@@ -80,7 +85,8 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(this, SettingsActivity.class));
+//            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -91,34 +97,63 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         int id = v.getId();
 
         if (id == R.id.btnSearch) {
-            String city = this.edtCity.getText().toString();
+            String cityName = this.edtCity.getText().toString();
+            this.retrieveCityInfo(cityName);
+        }
+    }
 
-            // TODO Context? getApplicationContext o getBaseContext?
-            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
-            if (temperaturesHelper.estaCiutatDescarregada(city)) {
-                Toast.makeText(this, "Llegint de la base de dades... TODO", Toast.LENGTH_SHORT).show();
-                // TODO
-            } else {
-                Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
-                new PrincipalActivity.Descarregador(this).execute(city);
-            }
+    private void retrieveCityInfo(String cityName) {
+        TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
+        if (temperaturesHelper.estaCiutatDescarregada(cityName)) {
+            Toast.makeText(this, "Llegint de la base de dades... TODO", Toast.LENGTH_SHORT).show();
+            // TODO
+        } else {
+            Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
+            new PrincipalActivity.Descarregador(this).execute(cityName);
         }
     }
 
     // TODO Moure el mètode a TemperaturesHelper o algo?
-    void onXmlDownloaded(String nomCiutat, String xml) {
-        Parsejador parsejador = new Parsejador();
+//    void onXmlDownloaded(String nomCiutat, String xml) {
+//        ParsejadorBlocXML parsejadorBlocXML = new ParsejadorBlocXML();
+//
+//        try {
+//            ArrayList<Bloc> blocs = parsejadorBlocXML.parseja(xml);
+////            this.fillBlocRecyclerView(blocs);
+//            this.createBlocListFragment(blocs);
+//
+//            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
+//            temperaturesHelper.guarda(nomCiutat, blocs);
+//            Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
+//        } catch (XmlPullParserException | IOException e) {
+//            Toast.makeText(this, "Error parsejant XML", Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
+    private void onDataDownloaded(String nomCiutat, String data) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String downloadFormat = sharedPreferences.getString(
+                "download_format",
+                PrincipalActivity.DEFAULT_DOWNLOAD_FORMAT
+        );
+
+        ParsejadorBloc parsejadorBloc;
+        if (downloadFormat.equals("XML")) {
+            parsejadorBloc = new ParsejadorBlocXML();
+        } else {
+            parsejadorBloc = new ParsejadorBlocJSON();
+        }
 
         try {
-            ArrayList<Bloc> blocs = parsejador.parseja(xml);
-//            this.fillBlocRecyclerView(blocs);
+            ArrayList<Bloc> blocs = parsejadorBloc.parseja(data);
             this.createBlocListFragment(blocs);
 
+            // TODO
             TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
             temperaturesHelper.guarda(nomCiutat, blocs);
             Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
         } catch (XmlPullParserException | IOException e) {
-            Toast.makeText(this, "Error parsejant XML", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error parsejant data (format " + downloadFormat + ")", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -161,10 +196,21 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         @Override
         protected Result doInBackground(String... nomCiutats) {
             this.nomCiutat = nomCiutats[0];
+
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this.principalActivity.get());
+            String downloadFormat = sharedPreferences.getString(
+                    "download_format",
+                    PrincipalActivity.DEFAULT_DOWNLOAD_FORMAT
+            );
+
             try {
                 // TODO En comptes de London posar la ciutat, i en comptes d'uk posar...?
                 //  Ah, doncs només amb London funciona igual.
-                URL url = new URL("http://api.openweathermap.org/data/2.5/forecast?q=" + this.nomCiutat + "&mode=xml&APPID=" + PrincipalActivity.API_KEY);
+                URL url = new URL(
+                        "http://api.openweathermap.org/data/2.5/forecast?q="+ this.nomCiutat
+                                + "&mode=" + downloadFormat.toLowerCase()
+                                + "&APPID=" + PrincipalActivity.API_KEY
+                );
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 // https://www.codejava.net/java-se/networking/how-to-use-java-urlconnection-and-httpurlconnection
@@ -199,8 +245,9 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this.principalActivity.get(), "Descàrrega OK, presentant info...", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
-                this.principalActivity.get().onXmlDownloaded(this.nomCiutat, r.message);
+//                Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
+//                this.principalActivity.get().onXmlDownloaded(this.nomCiutat, r.message);
+                this.principalActivity.get().onDataDownloaded(this.nomCiutat, r.message);
             }
         }
     }

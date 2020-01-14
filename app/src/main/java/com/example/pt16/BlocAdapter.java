@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder> {
     private ArrayList<Bloc> blocs;
 
-    public BlocAdapter(ArrayList<Bloc> blocs) {
+    BlocAdapter(ArrayList<Bloc> blocs) {
         this.blocs = blocs;
     }
 
@@ -46,12 +46,12 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
         return this.blocs.size();
     }
 
-    public static class BlocViewHolder extends RecyclerView.ViewHolder {
-        public TextView hourBegin;
-        public TextView temperature;
-        public ImageView icon;
+    static class BlocViewHolder extends RecyclerView.ViewHolder {
+        TextView hourBegin;
+        TextView temperature;
+        ImageView icon;
 
-        public BlocViewHolder(@NonNull View itemView) {
+        BlocViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.hourBegin = itemView.findViewById(R.id.hourBegin);

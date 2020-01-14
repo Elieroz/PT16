@@ -1,6 +1,6 @@
 package com.example.pt16;
 
-public class Bloc {
+class Bloc {
     private static final double COLD_THRESHOLD = 15.0;
 
     // TODO String? LocalTime?
@@ -18,20 +18,20 @@ public class Bloc {
      * @param hourBegin
      * @param temperature Temperatura en graus Kelvin.
      */
-    public Bloc(String hourBegin, double temperature) {
+    Bloc(String hourBegin, double temperature) {
         this.hourBegin = hourBegin;
         this.temperature = Bloc.kelvinToCelsius(temperature);
     }
 
-    public String getHourBegin() {
+    String getHourBegin() {
         return hourBegin;
     }
 
-    public double getTemperature() {
+    double getTemperature() {
         return temperature;
     }
 
-    public boolean isCold() {
+    boolean isCold() {
         return this.temperature <= Bloc.COLD_THRESHOLD;
     }
 }

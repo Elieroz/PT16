@@ -3,4 +3,6 @@
     <string name="app_name">PT16</string>
     <string name="action_settings">Ajustes</string>
     <string name="search">Buscar</string>
+    <string name="download">Descarga</string>
+    <string name="download_format">Formato de descarga</string>
 </resources>

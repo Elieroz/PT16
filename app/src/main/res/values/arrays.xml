@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="download_format_entries">
+        <item>XML</item>
+        <item>JSON</item>
+    </string-array>
+</resources>

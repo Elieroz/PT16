@@ -9,10 +9,11 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Parsejador {
-    public ArrayList<Bloc> parseja(String xml) throws XmlPullParserException, IOException {
+class ParsejadorBlocXML implements ParsejadorBloc {
+
+    @Override
+    public ArrayList<Bloc> parseja(String data) throws XmlPullParserException, IOException {
         ArrayList<Bloc> blocs = new ArrayList<>();
 
         XmlPullParserFactory xmlPullParserFactory = XmlPullParserFactory.newInstance();
@@ -20,7 +21,7 @@ public class Parsejador {
 //        xmlPullParserFactory.setNamespaceAware(true);
         XmlPullParser xmlPullParser = xmlPullParserFactory.newPullParser();
 
-        xmlPullParser.setInput(new StringReader(xml));
+        xmlPullParser.setInput(new StringReader(data));
 
         int eventType = xmlPullParser.getEventType();
 
@@ -30,10 +31,10 @@ public class Parsejador {
         while (eventType != XmlPullParser.END_DOCUMENT) {
             if (eventType == XmlPullParser.START_TAG) {
                 String tagName = xmlPullParser.getName();
-                Log.d("Parsejador", tagName);
+                Log.d("ParsejadorBlocXML", tagName);
 
                 if (tagName.equals("time")) {
-                    Log.d("Parsejador", "<time>");
+                    Log.d("ParsejadorBlocXML", "<time>");
 
                     // TODO Guardar hores per a saber de quina franja de temps són les tags següents.
                     horaInici = xmlPullParser.getAttributeValue(null, "from");
@@ -47,15 +48,17 @@ public class Parsejador {
                 String tagName = xmlPullParser.getName();
 
                 if (tagName.equals("time")) {
-                    Log.d("Parsejador", "</time>");
+                    Log.d("ParsejadorBlocXML", "</time>");
 
                     if (horaInici == null || temperatura == null) {
+                        // TODO
                         System.exit(666);
+                    } else {
+                        Log.d("ParsejadorBlocXML", horaInici + " -> " + temperatura);
+                        blocs.add(new Bloc(horaInici, temperatura));
+                        horaInici = null;
+                        temperatura = null;
                     }
-                    Log.d("Parsejador", horaInici + " -> " + temperatura);
-                    blocs.add(new Bloc(horaInici, temperatura));
-                    horaInici = null;
-                    temperatura = null;
                 }
             }
 
