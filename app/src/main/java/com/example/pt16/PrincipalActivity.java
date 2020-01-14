@@ -162,7 +162,17 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void createBlocListFragment(ArrayList<Bloc> blocs) {
-        BlocListFragment blocListFragment = BlocListFragment.newInstance(blocs);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String blocLayoutString = sharedPreferences.getString("bloc_layout_mode", "Compact");
+
+        int blocLayout;
+        if (blocLayoutString.equals("Bigger")) {
+            blocLayout = R.layout.bloc_layout_alt;
+        } else {
+            blocLayout = R.layout.bloc_layout;
+        }
+
+        BlocListFragment blocListFragment = BlocListFragment.newInstance(blocs, blocLayout);
 
         getSupportFragmentManager()
                 .beginTransaction()

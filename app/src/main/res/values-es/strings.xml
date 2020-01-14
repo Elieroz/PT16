@@ -5,4 +5,6 @@
     <string name="search">Buscar</string>
     <string name="download">Descarga</string>
     <string name="download_format">Formato de descarga</string>
+    <string name="_interface">Interfaz</string>
+    <string name="bloc_layout_mode">Modo de \"layout\"</string>
 </resources>

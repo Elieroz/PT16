@@ -4,4 +4,6 @@
     <string name="search">Search</string>
     <string name="download">Download</string>
     <string name="download_format">Download format</string>
+    <string name="_interface">Interface</string>
+    <string name="bloc_layout_mode">Bloc layout mode</string>
 </resources>

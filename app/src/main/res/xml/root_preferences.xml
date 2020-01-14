@@ -28,4 +28,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/_interface">
+
+        <ListPreference
+            app:key="bloc_layout_mode"
+            app:title="@string/bloc_layout_mode"
+
+            app:entries="@array/bloc_layout_modes"
+            app:entryValues="@array/bloc_layout_modes"
+            app:defaultValue="Compact"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

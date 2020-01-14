@@ -3,4 +3,14 @@
         <item>XML</item>
         <item>JSON</item>
     </string-array>
+
+    <string-array name="bloc_layout_modes">
+        <item>Compact</item>
+        <item>Bigger</item>
+    </string-array>
+
+<!--    <string-array name="bloc_layout_values">-->
+<!--        <item>@layout/bloc_layout</item>-->
+<!--        <item>@layout/bloc_layout_alt</item>-->
+<!--    </string-array>-->
 </resources>
