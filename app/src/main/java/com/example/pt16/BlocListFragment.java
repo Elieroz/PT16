@@ -19,15 +19,17 @@ import java.util.ArrayList;
  */
 public class BlocListFragment extends Fragment {
     private ArrayList<Bloc> blocs;
+    private int blocLayout;
 
     public BlocListFragment() {
         // Required empty public constructor
     }
 
-    public static BlocListFragment newInstance(ArrayList<Bloc> blocs) {
+    public static BlocListFragment newInstance(ArrayList<Bloc> blocs, int blocLayout) {
         BlocListFragment blocListFragment = new BlocListFragment();
 
         blocListFragment.blocs = blocs;
+        blocListFragment.blocLayout = blocLayout;
 
         Bundle args = new Bundle();
         // TODO Com se li passa un ArrayList? O hi ha una altra manera...?
@@ -48,7 +50,10 @@ public class BlocListFragment extends Fragment {
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext());
 
-        RecyclerView.Adapter<BlocAdapter.BlocViewHolder> blocViewHolderAdapter = new BlocAdapter(this.blocs);
+
+        RecyclerView.Adapter<BlocAdapter.BlocViewHolder> blocViewHolderAdapter =
+                new BlocAdapter(this.blocs, this.blocLayout)
+        ;
 
         blocRecyclerView.setLayoutManager(layoutManager);
         blocRecyclerView.setAdapter(blocViewHolderAdapter);
