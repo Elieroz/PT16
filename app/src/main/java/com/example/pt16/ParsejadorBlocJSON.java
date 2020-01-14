@@ -10,17 +10,24 @@ import java.util.List;
 
 public class ParsejadorBlocJSON implements ParsejadorBloc {
 
-    public static class BlocListJSON {
-        public List<BlocJSON> list;
+    private class BlocListJSON {
+        List<BlocJSON> list;
     }
 
-    public static class BlocJSON {
-        public String dt_txt;
-        public TempJSON main;
+    private class BlocJSON {
+        String dt_txt;
+        TempJSON main;
+        List<WeatherJSON> weather;
     }
 
-    public static class TempJSON {
-        public double temp;
+    private class TempJSON {
+        double temp;
+    }
+
+    private class WeatherJSON {
+        String main;
+        String description;
+        String icon;
     }
 
     @Override
@@ -31,7 +38,7 @@ public class ParsejadorBlocJSON implements ParsejadorBloc {
         BlocListJSON blocListJSON = gson.fromJson(data, BlocListJSON.class);
 
         for (BlocJSON blocJSON : blocListJSON.list) {
-            Bloc bloc = new Bloc(blocJSON.dt_txt, blocJSON.main.temp);
+            Bloc bloc = new Bloc(blocJSON.dt_txt, blocJSON.main.temp, blocJSON.weather.get(0).main, blocJSON.weather.get(0).icon);
             blocs.add(bloc);
         }
 

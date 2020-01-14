@@ -27,6 +27,8 @@ class ParsejadorBlocXML implements ParsejadorBloc {
 
         String horaInici = null;
         Double temperatura = null;
+        String icon = null;
+        String weatherMain = null;
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
             if (eventType == XmlPullParser.START_TAG) {
@@ -55,7 +57,8 @@ class ParsejadorBlocXML implements ParsejadorBloc {
                         System.exit(666);
                     } else {
                         Log.d("ParsejadorBlocXML", horaInici + " -> " + temperatura);
-                        blocs.add(new Bloc(horaInici, temperatura));
+                        // TODO
+                        blocs.add(new Bloc(horaInici, temperatura, "...", "10d"));
                         horaInici = null;
                         temperatura = null;
                     }
