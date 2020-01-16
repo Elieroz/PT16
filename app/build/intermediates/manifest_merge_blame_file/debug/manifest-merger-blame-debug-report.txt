@@ -1,0 +1,73 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.pt16"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+8-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:5:5-67
+11-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:5:22-64
+12
+13    <application
+13-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:7:5-28:19
+14        android:allowBackup="true"
+14-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:8:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:9:9-43
+18        android:label="@string/app_name"
+18-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:10:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:11:9-54
+20        android:supportsRtl="true"
+20-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:12:9-35
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme"
+22-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:13:9-40
+23        android:usesCleartextTraffic="true" >
+23-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:14:9-44
+24        <activity
+24-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:15:9-17:64
+25            android:name="com.example.pt16.SettingsActivity"
+25-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:16:13-45
+26            android:label="@string/action_settings" />
+26-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:17:13-52
+27        <activity
+27-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:18:9-27:20
+28            android:name="com.example.pt16.PrincipalActivity"
+28-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:19:13-46
+29            android:label="@string/app_name"
+29-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:20:13-45
+30            android:theme="@style/AppTheme.NoActionBar" >
+30-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:21:13-56
+31            <intent-filter>
+31-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:22:13-26:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:23:17-69
+32-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:23:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:25:17-77
+34-->/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:25:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <provider
+38-->[com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+39            android:name="com.squareup.picasso.PicassoProvider"
+39-->[com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+40            android:authorities="com.example.pt16.com.squareup.picasso"
+40-->[com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+41            android:exported="false" />
+41-->[com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+42    </application>
+43
+44</manifest>

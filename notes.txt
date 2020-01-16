@@ -1,0 +1,3 @@
+ViewHolder -> XML propi, els 4 mètodes que necessita per a funcionar...
+
+creat view (by???) holder

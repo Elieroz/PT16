@@ -1,0 +1,7 @@
+#Tue Jan 14 23:58:32 CET 2020
+base.0=/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex

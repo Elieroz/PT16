@@ -8,8 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TemperaturesHelper extends SQLiteOpenHelper {
-    private static final String CREATE_TABLE = "CREATE TABLE horesTemperatures (TODO)";
-    private static final String INSERT_TEMPERATURA_HORA = "INSERT INTO horesTemperatures ...";
+    private static final String CREATE_TABLE = "CREATE TABLE horesTemperatures (" +
+            "horaDataInici DATE," +
+            "temperatura NUMBER," +
+            // TODO Guardem la ciutat a cada bloc, o fem una taula per a cada ciutat?
+            "ciutat VARCHAR(20)" +
+            ")";
+    private static final String INSERT_BLOC = "INSERT INTO horesTemperatures VALUES (?, ?)";
+    private static final String SELECT_BY_PK = "SELECT horaDataInici, temperatura " +
+            "FROM horesTemperatures " +
+            "WHERE " +
+                "horaDataInici = ? " +
+                "AND ciutat = ?"
+    ;
 
     TemperaturesHelper(Context context) {
         // TODO Versió? Ni idea de què vol dir.
@@ -18,6 +29,7 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // TODO O sigui, onCreate és per quan
         db.execSQL(TemperaturesHelper.CREATE_TABLE);
     }
 
