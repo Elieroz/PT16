@@ -31,14 +31,14 @@ public class ParsejadorBlocJSON implements ParsejadorBloc {
     }
 
     @Override
-    public ArrayList<Bloc> parseja(String data) throws XmlPullParserException, IOException {
+    public ArrayList<Bloc> parseja(String cityName, String data) throws XmlPullParserException, IOException {
         ArrayList<Bloc> blocs = new ArrayList<>();
 
         Gson gson = new Gson();
         BlocListJSON blocListJSON = gson.fromJson(data, BlocListJSON.class);
 
         for (BlocJSON blocJSON : blocListJSON.list) {
-            Bloc bloc = new Bloc(blocJSON.dt_txt, blocJSON.main.temp, blocJSON.weather.get(0).main, blocJSON.weather.get(0).icon);
+            Bloc bloc = new Bloc(cityName, blocJSON.dt_txt, blocJSON.main.temp, blocJSON.weather.get(0).main, blocJSON.weather.get(0).icon);
             blocs.add(bloc);
         }
 

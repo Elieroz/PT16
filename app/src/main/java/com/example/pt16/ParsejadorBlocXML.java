@@ -12,8 +12,30 @@ import java.util.ArrayList;
 
 class ParsejadorBlocXML implements ParsejadorBloc {
 
+    private class BlocXML {
+        String dateBegin;
+        Double temperature;
+        String weatherName;
+        String weatherIcon;
+
+        BlocXML() {
+            this.dateBegin = null;
+            this.temperature = null;
+            this.weatherName = null;
+            this.weatherIcon = null;
+        }
+
+        boolean validFields() {
+            return this.dateBegin != null
+                    && this.temperature != null
+                    && this.weatherName != null
+                    && this.weatherIcon != null
+            ;
+        }
+    }
+
     @Override
-    public ArrayList<Bloc> parseja(String data) throws XmlPullParserException, IOException {
+    public ArrayList<Bloc> parseja(String cityName, String data) throws XmlPullParserException, IOException {
         ArrayList<Bloc> blocs = new ArrayList<>();
 
         XmlPullParserFactory xmlPullParserFactory = XmlPullParserFactory.newInstance();
@@ -25,43 +47,55 @@ class ParsejadorBlocXML implements ParsejadorBloc {
 
         int eventType = xmlPullParser.getEventType();
 
-        String horaInici = null;
-        Double temperatura = null;
-        String icon = null;
-        String weatherMain = null;
+        BlocXML blocXML = new BlocXML();
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
             if (eventType == XmlPullParser.START_TAG) {
                 String tagName = xmlPullParser.getName();
                 Log.d("ParsejadorBlocXML", tagName);
 
-                if (tagName.equals("time")) {
-                    Log.d("ParsejadorBlocXML", "<time>");
+                switch (tagName) {
+                    case "time":
+                        Log.d("ParsejadorBlocXML", "<time>");
 
-                    // TODO Guardar hores per a saber de quina franja de temps són les tags següents.
-                    horaInici = xmlPullParser.getAttributeValue(null, "from");
-                } else if (tagName.equals("temperature")) {
-                    // TODO Llegir l'atribut value.
-                    temperatura = Double.valueOf(
-                            xmlPullParser.getAttributeValue(null, "value")
-                    );
-                } // TODO Altres etiquetes.
+                        // Amb el format XML, la data ve amb una T entre la data i el temps. Per a
+                        // facilitar-ne el parseig la substitueixo amb un espai, que es el que hi
+                        // ha quan es fa servir el format JSON.
+                        blocXML.dateBegin = xmlPullParser.getAttributeValue(null, "from")
+                            .replace("T", " ")
+                        ;
+                        break;
+                    case "temperature":
+                        blocXML.temperature = Double.valueOf(
+                                xmlPullParser.getAttributeValue(null, "value")
+                        );
+                        break;
+                    case "symbol":
+                        blocXML.weatherName = xmlPullParser.getAttributeValue(null, "name");
+                        blocXML.weatherIcon = xmlPullParser.getAttributeValue(null, "var");
+                        break;
+                }
             } else if (eventType == XmlPullParser.END_TAG) {
                 String tagName = xmlPullParser.getName();
 
                 if (tagName.equals("time")) {
                     Log.d("ParsejadorBlocXML", "</time>");
 
-                    if (horaInici == null || temperatura == null) {
-                        // TODO
-                        System.exit(666);
+                    if (blocXML.validFields()) {
+                        Log.d("ParsejadorBlocXML", blocXML.dateBegin + " -> " + blocXML.temperature);
+                        blocs.add(new Bloc(
+                                cityName,
+                                blocXML.dateBegin,
+                                blocXML.temperature,
+                                blocXML.weatherName,
+                                blocXML.weatherIcon
+                        ));
+
                     } else {
-                        Log.d("ParsejadorBlocXML", horaInici + " -> " + temperatura);
-                        // TODO
-                        blocs.add(new Bloc(horaInici, temperatura, "...", "10d"));
-                        horaInici = null;
-                        temperatura = null;
+                        Log.d("ParsejadorBlocXML", "Error parsing <time> - skipping");
                     }
+
+                    blocXML = new BlocXML();
                 }
             }
 
