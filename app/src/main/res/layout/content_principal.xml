@@ -12,10 +12,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
 
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+
         android:orientation="horizontal">
 
         <EditText
@@ -25,7 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.25"
 
-            android:inputType="text"/>
+            android:inputType="text"
+            android:hint="@string/city_name"
+            android:importantForAutofill="no"/>
 
         <Button
             android:id="@+id/btnSearch"
@@ -42,7 +47,5 @@
         android:id="@+id/temperatures_hores_fragment"
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:layout_marginTop="16dp" />
+        android:layout_height="match_parent"/>
 </LinearLayout>
