@@ -1,62 +1,62 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
-MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.preference:preference:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/b23bc43f0317deaeb4982d68d7e803d7/preference-1.1.0-alpha05/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/d54c25bda511012af26183b778932b1f/appcompat-1.1.0-alpha05/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/062eb74c1a6fe650432564db4113c6b5/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a53596bdd308807993a20732db231575/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4fe44ae24daa7cfa2dd483a5d3b65a2f/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/ec593f8d91037f6ef1bbcd6a177afa1c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4f8b5527496d67480951cc322460db7f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/d2cae29ea156ecc28d8f5099dc624ed2/transition-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/767612e54049c1347a891905a7e9d5e4/media-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/2baa3685906bd9984932ee3b4bb83bb1/fragment-1.1.0-alpha08/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4932f7e67b26f042b51fa62f1aa4816d/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/8849109129fcb2f39779166fb64480b1/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/00bc847ce5b9e3ce7b40d465bffbf9e9/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5ad830c9e1047f79e3f0f7e9e42ab8ab/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a3c457ded457b98b207b4f227d629399/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3d4a3c67e39fa8d6d0c0f126c28b81d8/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/82b148795609bbbaf8e825fc2ff2a6bf/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/7f6af03f67781ca8e068252728ce1691/appcompat-resources-1.1.0-alpha05/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/015ecdf0999dc89f92bb04b12641ddb1/activity-1.0.0-alpha08/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/aead71d102747b384f24c0e0865aa9c2/vectordrawable-animated-1.1.0-beta01/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/9a62c6c0cdef35a2fb71fbf9f2b6b383/vectordrawable-1.1.0-beta01/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/664f4ae009672f8d49f9e02edae5cc02/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f582580d3eb247a74d915a27810a4674/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c75155371656c04dff3a027cdeb13e8a/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/53b4a4cf87c0ff501a8c414cec884555/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3a992d8307f21a8f15eb649383ba6a6a/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fb2fbe77879a57ea0c5dfd6fe59ba874/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/78be57497ca2a8dd090798c529f3e53d/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/2386276043c7c5a983e65a85bdba9edd/lifecycle-viewmodel-2.2.0-alpha01/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/8d6ba2f4c07929258e39743775111351/savedstate-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/63647da4654da12a6f2785cfbbad8123/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/733fc1d306cee2c05d3e1fb0b7527020/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fdd65d8b6066fd289a68b42931dc03a2/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/b31c7967fb884a2cb9385125169a2f80/lifecycle-runtime-2.2.0-alpha01/AndroidManifest.xml:17:1-22:12
-INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
+MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/645638f7f65c8e963fc7b32d0f23dfe4/material-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.preference:preference:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/d9b3516b31f2b3d598f450df9bfc5c7c/preference-1.1.0-alpha05/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/a18ada7d4219f58769ca0e8ebd315ec7/appcompat-1.1.0-alpha05/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/e0190430d49f0d26aada3bceb5a75523/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5942892545672f3d48b9dd58bc46345b/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/0f88e4a8fae9fdde29a9ab869f714011/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/ce5a56d2cadb851fea6c9c47f232a32c/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/49ab1e08bee314e8b2bbd068c46cfd60/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/d6c561a34024934b6fd762181e382987/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/90062473d4247da574f12f01e6ed3be9/transition-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/1033cafee0ead90ebd4d341ea85805df/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/2272a3ec07b669fe817b94a83708c701/fragment-1.1.0-alpha08/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/de2ff824a838a4408e21c1cd74769053/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f65a4bff1922b78f70a962de704f60b8/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c4bf3a3f06e63ad70cf56f1e5a051667/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fcaa11dda0722520b367f372a77ef757/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a9d317efee82b71944975c4615a25fa4/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/46a99708e706db72cbab38c521ec38fc/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/79db4ba6ddbb5751e5c5748f6f955d5f/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/92190f2a292ca912a1b537de94ccd6b0/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/bc4a45bccdff50bb0c52733b80d569b2/appcompat-resources-1.1.0-alpha05/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/de88c04ffc5ac1103e701f50a602da17/activity-1.0.0-alpha08/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/609c17a0a64b82d5f3612eea725713f7/vectordrawable-animated-1.1.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/1f76ec56cf19c5f61f4b798746cb0261/vectordrawable-1.1.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ce76357eb0ce1b60a50286484636c02/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/1a6950ef7beca51b3bdaa11e0c23ab06/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/14b86232e88f8a06df62304ff9d1a768/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/0c31fe3192d1aeb5d5c91e0d425a4c4d/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/2017efdcf7fec0553c6df451115cee32/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f66b46b9df773a49e71b831a39805ca1/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/820d7ae99bffd66e489d8b426940e59b/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/6a86cbb34c6fe2a75529de8a2b27d303/lifecycle-viewmodel-2.2.0-alpha01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/633b892ed23f2107560c59fe070df2ca/savedstate-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/7bbfa4603c3324502a26406539db0bd9/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/563f977af5a12d0805d7958c6b617779/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/95149147f8fb7e4b83e6208d17895b8c/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/219c260a991d9551868662eb7785a41f/lifecycle-runtime-2.2.0-alpha01/AndroidManifest.xml:17:1-22:12
+INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:2:11-69
@@ -65,23 +65,25 @@ ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProj
 	android:name
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:7:5-28:19
-MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
-MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/78be57497ca2a8dd090798c529f3e53d/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/78be57497ca2a8dd090798c529f3e53d/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:7:5-32:19
+MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/645638f7f65c8e963fc7b32d0f23dfe4/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/645638f7f65c8e963fc7b32d0f23dfe4/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/e0190430d49f0d26aada3bceb5a75523/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/e0190430d49f0d26aada3bceb5a75523/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/820d7ae99bffd66e489d8b426940e59b/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/820d7ae99bffd66e489d8b426940e59b/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:10:9-41
+	android:fullBackupContent
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:16:9-42
 	android:roundIcon
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
@@ -93,111 +95,113 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/berna
 	android:usesCleartextTraffic
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:14:9-44
 activity#com.example.pt16.SettingsActivity
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:15:9-17:64
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:17:9-19:64
 	android:label
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:17:13-52
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:19:13-52
 	android:name
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:16:13-45
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:18:13-45
 activity#com.example.pt16.PrincipalActivity
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:18:9-27:20
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:20:9-31:20
 	android:label
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:20:13-45
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:22:13-45
+	android:configChanges
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:25:13-59
 	android:theme
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:21:13-56
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:23:13-56
 	android:name
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:19:13-46
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:21:13-46
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:22:13-26:29
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:23:17-69
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:25:17-77
+ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml:29:27-74
 uses-sdk
 INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c7eb9cd3508ac3959447c14fd76c9fb9/material-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.preference:preference:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/b23bc43f0317deaeb4982d68d7e803d7/preference-1.1.0-alpha05/AndroidManifest.xml:20:5-44
-MERGED from [androidx.preference:preference:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/b23bc43f0317deaeb4982d68d7e803d7/preference-1.1.0-alpha05/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/d54c25bda511012af26183b778932b1f/appcompat-1.1.0-alpha05/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/d54c25bda511012af26183b778932b1f/appcompat-1.1.0-alpha05/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ec6fa8458ddbe732478393a9f9e6c77/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/062eb74c1a6fe650432564db4113c6b5/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/062eb74c1a6fe650432564db4113c6b5/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a53596bdd308807993a20732db231575/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a53596bdd308807993a20732db231575/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4fe44ae24daa7cfa2dd483a5d3b65a2f/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4fe44ae24daa7cfa2dd483a5d3b65a2f/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/ec593f8d91037f6ef1bbcd6a177afa1c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/ec593f8d91037f6ef1bbcd6a177afa1c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4f8b5527496d67480951cc322460db7f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4f8b5527496d67480951cc322460db7f/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/d2cae29ea156ecc28d8f5099dc624ed2/transition-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/d2cae29ea156ecc28d8f5099dc624ed2/transition-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/767612e54049c1347a891905a7e9d5e4/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/767612e54049c1347a891905a7e9d5e4/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/2baa3685906bd9984932ee3b4bb83bb1/fragment-1.1.0-alpha08/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/2baa3685906bd9984932ee3b4bb83bb1/fragment-1.1.0-alpha08/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4932f7e67b26f042b51fa62f1aa4816d/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/4932f7e67b26f042b51fa62f1aa4816d/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/8849109129fcb2f39779166fb64480b1/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/8849109129fcb2f39779166fb64480b1/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/00bc847ce5b9e3ce7b40d465bffbf9e9/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/00bc847ce5b9e3ce7b40d465bffbf9e9/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5ad830c9e1047f79e3f0f7e9e42ab8ab/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5ad830c9e1047f79e3f0f7e9e42ab8ab/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a3c457ded457b98b207b4f227d629399/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a3c457ded457b98b207b4f227d629399/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5276819c062a92c029464122749254f1/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3d4a3c67e39fa8d6d0c0f126c28b81d8/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3d4a3c67e39fa8d6d0c0f126c28b81d8/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/82b148795609bbbaf8e825fc2ff2a6bf/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/82b148795609bbbaf8e825fc2ff2a6bf/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/7f6af03f67781ca8e068252728ce1691/appcompat-resources-1.1.0-alpha05/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/7f6af03f67781ca8e068252728ce1691/appcompat-resources-1.1.0-alpha05/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/015ecdf0999dc89f92bb04b12641ddb1/activity-1.0.0-alpha08/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/015ecdf0999dc89f92bb04b12641ddb1/activity-1.0.0-alpha08/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/aead71d102747b384f24c0e0865aa9c2/vectordrawable-animated-1.1.0-beta01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/aead71d102747b384f24c0e0865aa9c2/vectordrawable-animated-1.1.0-beta01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/9a62c6c0cdef35a2fb71fbf9f2b6b383/vectordrawable-1.1.0-beta01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/9a62c6c0cdef35a2fb71fbf9f2b6b383/vectordrawable-1.1.0-beta01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/664f4ae009672f8d49f9e02edae5cc02/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/664f4ae009672f8d49f9e02edae5cc02/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f582580d3eb247a74d915a27810a4674/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f582580d3eb247a74d915a27810a4674/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c75155371656c04dff3a027cdeb13e8a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c75155371656c04dff3a027cdeb13e8a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/53b4a4cf87c0ff501a8c414cec884555/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/53b4a4cf87c0ff501a8c414cec884555/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3a992d8307f21a8f15eb649383ba6a6a/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3a992d8307f21a8f15eb649383ba6a6a/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fb2fbe77879a57ea0c5dfd6fe59ba874/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fb2fbe77879a57ea0c5dfd6fe59ba874/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/78be57497ca2a8dd090798c529f3e53d/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/78be57497ca2a8dd090798c529f3e53d/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/2386276043c7c5a983e65a85bdba9edd/lifecycle-viewmodel-2.2.0-alpha01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/2386276043c7c5a983e65a85bdba9edd/lifecycle-viewmodel-2.2.0-alpha01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/8d6ba2f4c07929258e39743775111351/savedstate-1.0.0-beta01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/8d6ba2f4c07929258e39743775111351/savedstate-1.0.0-beta01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/63647da4654da12a6f2785cfbbad8123/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/63647da4654da12a6f2785cfbbad8123/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/733fc1d306cee2c05d3e1fb0b7527020/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/733fc1d306cee2c05d3e1fb0b7527020/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fdd65d8b6066fd289a68b42931dc03a2/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fdd65d8b6066fd289a68b42931dc03a2/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/b31c7967fb884a2cb9385125169a2f80/lifecycle-runtime-2.2.0-alpha01/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/b31c7967fb884a2cb9385125169a2f80/lifecycle-runtime-2.2.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/645638f7f65c8e963fc7b32d0f23dfe4/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/645638f7f65c8e963fc7b32d0f23dfe4/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/d9b3516b31f2b3d598f450df9bfc5c7c/preference-1.1.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/d9b3516b31f2b3d598f450df9bfc5c7c/preference-1.1.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/a18ada7d4219f58769ca0e8ebd315ec7/appcompat-1.1.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/a18ada7d4219f58769ca0e8ebd315ec7/appcompat-1.1.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/e0190430d49f0d26aada3bceb5a75523/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bernat/.gradle/caches/transforms-2/files-2.1/e0190430d49f0d26aada3bceb5a75523/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5942892545672f3d48b9dd58bc46345b/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/5942892545672f3d48b9dd58bc46345b/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/0f88e4a8fae9fdde29a9ab869f714011/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/0f88e4a8fae9fdde29a9ab869f714011/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/ce5a56d2cadb851fea6c9c47f232a32c/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/ce5a56d2cadb851fea6c9c47f232a32c/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/49ab1e08bee314e8b2bbd068c46cfd60/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/49ab1e08bee314e8b2bbd068c46cfd60/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/d6c561a34024934b6fd762181e382987/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/d6c561a34024934b6fd762181e382987/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/90062473d4247da574f12f01e6ed3be9/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/90062473d4247da574f12f01e6ed3be9/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/1033cafee0ead90ebd4d341ea85805df/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/1033cafee0ead90ebd4d341ea85805df/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/2272a3ec07b669fe817b94a83708c701/fragment-1.1.0-alpha08/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/2272a3ec07b669fe817b94a83708c701/fragment-1.1.0-alpha08/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/de2ff824a838a4408e21c1cd74769053/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/de2ff824a838a4408e21c1cd74769053/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f65a4bff1922b78f70a962de704f60b8/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f65a4bff1922b78f70a962de704f60b8/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c4bf3a3f06e63ad70cf56f1e5a051667/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/c4bf3a3f06e63ad70cf56f1e5a051667/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fcaa11dda0722520b367f372a77ef757/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/fcaa11dda0722520b367f372a77ef757/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a9d317efee82b71944975c4615a25fa4/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/a9d317efee82b71944975c4615a25fa4/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/46a99708e706db72cbab38c521ec38fc/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/46a99708e706db72cbab38c521ec38fc/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/79db4ba6ddbb5751e5c5748f6f955d5f/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/79db4ba6ddbb5751e5c5748f6f955d5f/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/92190f2a292ca912a1b537de94ccd6b0/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/92190f2a292ca912a1b537de94ccd6b0/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/bc4a45bccdff50bb0c52733b80d569b2/appcompat-resources-1.1.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/bernat/.gradle/caches/transforms-2/files-2.1/bc4a45bccdff50bb0c52733b80d569b2/appcompat-resources-1.1.0-alpha05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/de88c04ffc5ac1103e701f50a602da17/activity-1.0.0-alpha08/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/bernat/.gradle/caches/transforms-2/files-2.1/de88c04ffc5ac1103e701f50a602da17/activity-1.0.0-alpha08/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/609c17a0a64b82d5f3612eea725713f7/vectordrawable-animated-1.1.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/609c17a0a64b82d5f3612eea725713f7/vectordrawable-animated-1.1.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/1f76ec56cf19c5f61f4b798746cb0261/vectordrawable-1.1.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/1f76ec56cf19c5f61f4b798746cb0261/vectordrawable-1.1.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ce76357eb0ce1b60a50286484636c02/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/3ce76357eb0ce1b60a50286484636c02/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/1a6950ef7beca51b3bdaa11e0c23ab06/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/1a6950ef7beca51b3bdaa11e0c23ab06/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/14b86232e88f8a06df62304ff9d1a768/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/14b86232e88f8a06df62304ff9d1a768/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/0c31fe3192d1aeb5d5c91e0d425a4c4d/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/0c31fe3192d1aeb5d5c91e0d425a4c4d/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/2017efdcf7fec0553c6df451115cee32/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/2017efdcf7fec0553c6df451115cee32/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f66b46b9df773a49e71b831a39805ca1/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/f66b46b9df773a49e71b831a39805ca1/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/820d7ae99bffd66e489d8b426940e59b/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/820d7ae99bffd66e489d8b426940e59b/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/6a86cbb34c6fe2a75529de8a2b27d303/lifecycle-viewmodel-2.2.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/6a86cbb34c6fe2a75529de8a2b27d303/lifecycle-viewmodel-2.2.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/633b892ed23f2107560c59fe070df2ca/savedstate-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/bernat/.gradle/caches/transforms-2/files-2.1/633b892ed23f2107560c59fe070df2ca/savedstate-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/7bbfa4603c3324502a26406539db0bd9/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/7bbfa4603c3324502a26406539db0bd9/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/563f977af5a12d0805d7958c6b617779/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/563f977af5a12d0805d7958c6b617779/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/95149147f8fb7e4b83e6208d17895b8c/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bernat/.gradle/caches/transforms-2/files-2.1/95149147f8fb7e4b83e6208d17895b8c/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/219c260a991d9551868662eb7785a41f/lifecycle-runtime-2.2.0-alpha01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/bernat/.gradle/caches/transforms-2/files-2.1/219c260a991d9551868662eb7785a41f/lifecycle-runtime-2.2.0-alpha01/AndroidManifest.xml:20:5-44
 INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -209,10 +213,10 @@ INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioP
 		ADDED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 		INJECTED from /run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/src/main/AndroidManifest.xml
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/f1913345f9e0a6e838c1a70b20a05fad/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bernat/.gradle/caches/transforms-2/files-2.1/c3d58add7491f7053c3c738d56978f46/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64

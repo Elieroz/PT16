@@ -4,7 +4,7 @@
             "outputFile": "/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/res/values-as/values-as.xml",
+                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/b23bc43f0317deaeb4982d68d7e803d7/preference-1.1.0-alpha05/res/values-as/values-as.xml",
+                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/d9b3516b31f2b3d598f450df9bfc5c7c/preference-1.1.0-alpha05/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

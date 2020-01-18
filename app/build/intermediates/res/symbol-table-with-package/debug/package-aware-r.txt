@@ -39,6 +39,7 @@ animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array bloc_layout_modes
 array download_format_entries
+array temperature_unit_entries
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1248,7 +1249,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1308,6 +1308,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recycler_view
+id reset_database
 id right
 id right_icon
 id right_side
@@ -1554,6 +1555,7 @@ string bloc_layout_mode
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
+string city_name
 string copy
 string download
 string download_format
@@ -1569,10 +1571,12 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string preference_copied
+string reset_database
 string search
 string search_menu_title
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
+string temperature_unit
 string v7_preference_off
 string v7_preference_on
 style AlertDialog_AppCompat

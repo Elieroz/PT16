@@ -4,24 +4,7 @@
             "outputFile": "/run/media/bernat/DATA/MEGAsync/2WIAM/M08_-_Android/AndroidStudioProjects/PT16/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
             "map": [
                 {
-                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/res/values-sv/values-sv.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "34",
-                        "startColumns": "4",
-                        "startOffsets": "3230",
-                        "endColumns": "100",
-                        "endOffsets": "3326"
-                    }
-                },
-                {
-                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/d54c25bda511012af26183b778932b1f/appcompat-1.1.0-alpha05/res/values-sv/values-sv.xml",
+                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/a18ada7d4219f58769ca0e8ebd315ec7/appcompat-1.1.0-alpha05/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/b23bc43f0317deaeb4982d68d7e803d7/preference-1.1.0-alpha05/res/values-sv/values-sv.xml",
+                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/992a8ea986e0e8cc64f6bd1e4922a1ac/core-1.1.0/res/values-sv/values-sv.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "34",
+                        "startColumns": "4",
+                        "startOffsets": "3230",
+                        "endColumns": "100",
+                        "endOffsets": "3326"
+                    }
+                },
+                {
+                    "source": "/home/bernat/.gradle/caches/transforms-2/files-2.1/d9b3516b31f2b3d598f450df9bfc5c7c/preference-1.1.0-alpha05/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
