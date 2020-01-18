@@ -16,10 +16,30 @@ import java.util.ArrayList;
 public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder> {
     private ArrayList<Bloc> blocs;
     private int blocLayout;
+    private TemperatureUnit temperatureUnit;
 
-    BlocAdapter(ArrayList<Bloc> blocs, int blocLayout) {
+    enum TemperatureUnit {
+        Celsius,
+        Kelvin,
+        Fahrenheit,
+    }
+
+    private static double roundToTwoXifres(double num) {
+        return Math.round(num * 100.0) / 100.0;
+    }
+
+    static double kelvinToCelsius(double temperature) {
+        return BlocAdapter.roundToTwoXifres(temperature - 273.15);
+    }
+
+    static double kelvinToFahrenheit(double temperature) {
+        return BlocAdapter.roundToTwoXifres(9.0/5.0 * (temperature - 273.15) + 32);
+    }
+
+    BlocAdapter(ArrayList<Bloc> blocs, int blocLayout, TemperatureUnit temperatureUnit) {
         this.blocs = blocs;
         this.blocLayout = blocLayout;
+        this.temperatureUnit = temperatureUnit;
     }
 
     @NonNull
@@ -36,11 +56,27 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
     public void onBindViewHolder(@NonNull BlocViewHolder holder, int position) {
         Bloc bloc = this.blocs.get(position);
 
+        double temperature = bloc.getTemperature();
+        String unit = " K";
+        if (this.temperatureUnit == TemperatureUnit.Celsius) {
+            temperature = BlocAdapter.kelvinToCelsius(temperature);
+            unit = " ºC";
+        } else if (this.temperatureUnit == TemperatureUnit.Fahrenheit) {
+            temperature = BlocAdapter.kelvinToFahrenheit(temperature);
+            unit = " F";
+        }
+
         holder.hourBegin.setText(bloc.getHourBegin());
-        holder.temperature.setText(Double.toString(bloc.getTemperature()));
+        holder.temperature.setText(
+                String.format("%s%s", temperature, unit)
+        );
 
         Picasso.get()
-                .load("http://openweathermap.org/img/wn/" + bloc.getIcon() + "@2x.png")
+                .load(
+                "http://openweathermap.org/img/wn/"
+                    + bloc.getIcon()
+                    + "@2x.png"
+                )
                 .into(holder.icon)
         ;
     }

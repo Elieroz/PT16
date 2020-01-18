@@ -38,6 +38,14 @@
             app:entryValues="@array/bloc_layout_modes"
             app:defaultValue="Compact"/>
 
+        <ListPreference
+            app:key="temperature_unit"
+            app:title="@string/temperature_unit"
+
+            app:entries="@array/temperature_unit_entries"
+            app:entryValues="@array/temperature_unit_entries"
+            app:defaultValue="Celsius"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

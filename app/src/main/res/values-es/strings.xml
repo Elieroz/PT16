@@ -7,4 +7,6 @@
     <string name="download_format">Formato de descarga</string>
     <string name="_interface">Interfaz</string>
     <string name="bloc_layout_mode">Modo de \"layout\"</string>
+    <string name="temperature_unit">Unidad de temperatura</string>
+    <string name="reset_database">Resetear base de datos</string>
 </resources>

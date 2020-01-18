@@ -6,5 +6,5 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public interface ParsejadorBloc {
-    ArrayList<Bloc> parseja(String data) throws XmlPullParserException, IOException;
+    ArrayList<Bloc> parseja(String cityName, String data) throws XmlPullParserException, IOException;
 }

@@ -86,7 +86,11 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
-//            return true;
+        } else if (id == R.id.reset_database) {
+            // TODO
+            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(this);
+            temperaturesHelper.onUpgrade(temperaturesHelper.getWritableDatabase(), 1, 1);
+            Toast.makeText(this, "Database reset OK", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -104,31 +108,41 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
 
     private void retrieveCityInfo(String cityName) {
         TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
-        if (temperaturesHelper.estaCiutatDescarregada(cityName)) {
-            Toast.makeText(this, "Llegint de la base de dades... TODO", Toast.LENGTH_SHORT).show();
-            // TODO
+
+        if (temperaturesHelper.isCityInfoDownloaded(cityName)) {
+            if (temperaturesHelper.isCityInfoUpToDate(cityName)) {
+                Toast.makeText(this, "Llegint de la base de dades...", Toast.LENGTH_SHORT).show();
+
+                // TODO Al seu propi mètode?
+                ArrayList<Bloc> blocs = temperaturesHelper.llegeix(cityName);
+                this.createBlocListFragment(blocs);
+
+            } else {
+                Toast.makeText(this, "Dades desactualitzades, descarregant...", Toast.LENGTH_SHORT).show();
+                temperaturesHelper.deleteNotUpToDate(cityName);
+                this.downloadData(cityName);
+            }
         } else {
-            Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
-            new PrincipalActivity.Descarregador(this).execute(cityName);
+            Toast.makeText(this, "Dades no disponibles a la base de dades, descarregant...", Toast.LENGTH_SHORT).show();
+            this.downloadData(cityName);
         }
+
+//        if (temperaturesHelper.cityAvailableAndUpToDate(cityName)) {
+//            Toast.makeText(this, "Llegint de la base de dades... TODO", Toast.LENGTH_SHORT).show();
+//
+//            // TODO Al seu propi mètode?
+//            ArrayList<Bloc> blocs = temperaturesHelper.llegeix(cityName);
+//            this.createBlocListFragment(blocs);
+//        } else {
+//            Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
+//            new PrincipalActivity.Descarregador(this).execute(cityName);
+//        }
     }
 
-    // TODO Moure el mètode a TemperaturesHelper o algo?
-//    void onXmlDownloaded(String nomCiutat, String xml) {
-//        ParsejadorBlocXML parsejadorBlocXML = new ParsejadorBlocXML();
-//
-//        try {
-//            ArrayList<Bloc> blocs = parsejadorBlocXML.parseja(xml);
-////            this.fillBlocRecyclerView(blocs);
-//            this.createBlocListFragment(blocs);
-//
-//            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
-//            temperaturesHelper.guarda(nomCiutat, blocs);
-//            Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
-//        } catch (XmlPullParserException | IOException e) {
-//            Toast.makeText(this, "Error parsejant XML", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+    private void downloadData(String cityName) {
+        Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
+        new PrincipalActivity.Descarregador(this).execute(cityName);
+    }
 
     private void onDataDownloaded(String nomCiutat, String data) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -145,12 +159,12 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         }
 
         try {
-            ArrayList<Bloc> blocs = parsejadorBloc.parseja(data);
+            ArrayList<Bloc> blocs = parsejadorBloc.parseja(nomCiutat, data);
             this.createBlocListFragment(blocs);
 
             // TODO
             TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
-            temperaturesHelper.guarda(nomCiutat, blocs);
+            temperaturesHelper.guarda(blocs);
             Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
         } catch (XmlPullParserException | IOException e) {
             Toast.makeText(this, "Error parsejant data (format " + downloadFormat + ")", Toast.LENGTH_LONG).show();
@@ -172,7 +186,11 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             blocLayout = R.layout.bloc_layout;
         }
 
-        BlocListFragment blocListFragment = BlocListFragment.newInstance(blocs, blocLayout);
+        String temperatureUnitString = sharedPreferences.getString("temperature_unit", "Celsius");
+
+        BlocAdapter.TemperatureUnit temperatureUnit = BlocAdapter.TemperatureUnit.valueOf(temperatureUnitString);
+
+        BlocListFragment blocListFragment = BlocListFragment.newInstance(blocs, blocLayout, temperatureUnit);
 
         getSupportFragmentManager()
                 .beginTransaction()
