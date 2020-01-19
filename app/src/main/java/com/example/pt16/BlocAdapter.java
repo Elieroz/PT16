@@ -66,10 +66,19 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
             unit = " F";
         }
 
-        holder.dateBegin.setText(bloc.getDateBeginFormatted());
         holder.temperature.setText(
                 String.format("%s%s", temperature, unit)
         );
+
+        holder.hourBegin.setText(bloc.getHourBegin());
+
+        if (position == 0 || bloc.isStartOfNewDay()) {
+            holder.day.setText(bloc.getDay());
+        } else {
+            // Resulta que si no es fa això no s'esborra el text quan es fa scroll... He llegit que
+            // té a veure amb com el RecyclerView recicla elements i tal.
+            holder.day.setText("");
+        }
 
         Picasso.get()
                 .load(
@@ -87,14 +96,16 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
     }
 
     static class BlocViewHolder extends RecyclerView.ViewHolder {
-        TextView dateBegin;
+        TextView hourBegin;
+        TextView day;
         TextView temperature;
         ImageView weatherIcon;
 
         BlocViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            this.dateBegin = itemView.findViewById(R.id.dateBegin);
+            this.hourBegin = itemView.findViewById(R.id.hourBegin);
+            this.day = itemView.findViewById(R.id.day);
             this.temperature = itemView.findViewById(R.id.temperature);
             this.weatherIcon = itemView.findViewById(R.id.weatherIcon);
         }

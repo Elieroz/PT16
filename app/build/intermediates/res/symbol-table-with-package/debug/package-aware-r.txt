@@ -1229,7 +1229,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
-id dateBegin
+id day
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1262,6 +1262,7 @@ id group_divider
 id groups
 id home
 id homeAsUp
+id hourBegin
 id icon
 id icon_frame
 id icon_group

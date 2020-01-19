@@ -9,7 +9,9 @@ class Bloc {
     private String weatherName;
     private String weatherIcon;
 
-    private static DateTimeFormatter DTF = DateTimeFormatter.ofPattern("dd/MM hh:mm");
+    private static DateTimeFormatter DTF = DateTimeFormatter.ofPattern("dd/MM HH:mm");
+    private static DateTimeFormatter DTF_HOUR = DateTimeFormatter.ofPattern("HH:mm");
+    private static DateTimeFormatter DTF_DAY = DateTimeFormatter.ofPattern("dd/MM");
 
     /**
      * @param temperature Temperatura en graus Kelvin.
@@ -30,8 +32,16 @@ class Bloc {
         return this.dateBegin;
     }
 
-    String getDateBeginFormatted() {
-        return Bloc.DTF.format(BlocSQLiteContract.parseToDate(this.dateBegin));
+//    String getDateBeginFormatted() {
+//        return Bloc.DTF.format(BlocSQLiteContract.parseToDate(this.dateBegin));
+//    }
+
+    String getHourBegin() {
+        return Bloc.DTF_HOUR.format(BlocSQLiteContract.parseToDate(this.dateBegin));
+    }
+
+    String getDay() {
+        return Bloc.DTF_DAY.format(BlocSQLiteContract.parseToDate(this.dateBegin));
     }
 
     double getTemperature() {
@@ -44,5 +54,9 @@ class Bloc {
 
     String getWeatherIcon() {
         return this.weatherIcon;
+    }
+
+    boolean isStartOfNewDay() {
+        return this.dateBegin.endsWith("00:00:00");
     }
 }
