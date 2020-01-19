@@ -65,7 +65,8 @@
             android:layout_centerVertical="true"
 
             android:text="Day"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 
