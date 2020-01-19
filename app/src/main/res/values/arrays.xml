@@ -5,8 +5,8 @@
     </string-array>
 
     <string-array name="bloc_layout_entries">
-        <item>Image at the right</item>
-        <item>Image at the left</item>
+        <item>Small color party</item>
+        <item>50 Shades of Weather</item>
     </string-array>
 
     <string-array name="bloc_layout_values">
