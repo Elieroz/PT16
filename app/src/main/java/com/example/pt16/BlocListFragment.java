@@ -33,10 +33,6 @@ public class BlocListFragment extends Fragment {
         blocListFragment.blocLayout = blocLayout;
         blocListFragment.temperatureUnit = temperatureUnit;
 
-//        Bundle args = new Bundle();
-        // TODO Com se li passa un ArrayList? O hi ha una altra manera...?
-//        args.put
-
         return blocListFragment;
     }
 
@@ -47,7 +43,7 @@ public class BlocListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bloc_list, container, false);
 
         RecyclerView blocRecyclerView = view.findViewById(R.id.bloc_recycler_view);
-        // La llista no canvia en runtime; mateixa mida. TODO I quan la buido i torno a omplir?
+        // La llista no canvia en runtime; mateixa mida.
         blocRecyclerView.setHasFixedSize(true);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext());

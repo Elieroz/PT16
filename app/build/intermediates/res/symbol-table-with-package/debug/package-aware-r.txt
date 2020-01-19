@@ -1229,6 +1229,7 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id dateBegin
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1261,7 +1262,6 @@ id group_divider
 id groups
 id home
 id homeAsUp
-id hourBegin
 id icon
 id icon_frame
 id icon_group
@@ -1400,6 +1400,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id weatherIcon
 id withText
 id wrap
 id wrap_content

@@ -5,9 +5,6 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
@@ -88,7 +85,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (id == R.id.reset_database) {
             // TODO
-            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(this);
+            BlocSQLiteHelper temperaturesHelper = new BlocSQLiteHelper(this);
             temperaturesHelper.onUpgrade(temperaturesHelper.getWritableDatabase(), 1, 1);
             Toast.makeText(this, "Database reset OK", Toast.LENGTH_SHORT).show();
         }
@@ -107,7 +104,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void retrieveCityInfo(String cityName) {
-        TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
+        BlocSQLiteHelper temperaturesHelper = new BlocSQLiteHelper(getApplicationContext());
 
         if (temperaturesHelper.isCityInfoDownloaded(cityName)) {
             if (temperaturesHelper.isCityInfoUpToDate(cityName)) {
@@ -163,7 +160,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             this.createBlocListFragment(blocs);
 
             // TODO
-            TemperaturesHelper temperaturesHelper = new TemperaturesHelper(getApplicationContext());
+            BlocSQLiteHelper temperaturesHelper = new BlocSQLiteHelper(getApplicationContext());
             temperaturesHelper.guarda(blocs);
             Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
         } catch (XmlPullParserException | IOException e) {

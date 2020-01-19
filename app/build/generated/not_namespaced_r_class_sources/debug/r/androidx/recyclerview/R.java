@@ -135,8 +135,8 @@ public final class R {
         public static final int async = 0x7f090040;
         public static final int blocking = 0x7f090045;
         public static final int chronometer = 0x7f090050;
-        public static final int dialog_button = 0x7f090061;
-        public static final int forever = 0x7f090073;
+        public static final int dialog_button = 0x7f090062;
+        public static final int forever = 0x7f090074;
         public static final int icon = 0x7f09007b;
         public static final int icon_group = 0x7f09007d;
         public static final int info = 0x7f090080;

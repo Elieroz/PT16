@@ -1,50 +1,48 @@
 package com.example.pt16;
 
-class Bloc {
-    private static final double COLD_THRESHOLD = 15.0;
+import java.time.format.DateTimeFormatter;
 
+class Bloc {
     private String cityName;
-    // TODO String? LocalTime?
-    private String hourBegin;
+    private String dateBegin;
     private double temperature;
-    // TODO Ho guardem aquí o ho calculem a partir de la temperature quan calgui?
-//    private boolean faFred;
-    private String weather;
-    private String icon;
+    private String weatherName;
+    private String weatherIcon;
+
+    private static DateTimeFormatter DTF = DateTimeFormatter.ofPattern("dd/MM hh:mm");
 
     /**
-     * @param hourBegin
      * @param temperature Temperatura en graus Kelvin.
      */
-    Bloc(String cityName, String hourBegin, double temperature, String weather, String icon) {
+    Bloc(String cityName, String dateBegin, double temperature, String weatherName, String weatherIcon) {
         this.cityName = cityName;
-        this.hourBegin = hourBegin;
+        this.dateBegin = dateBegin;
         this.temperature = temperature;
-        this.weather = weather;
-        this.icon = icon;
+        this.weatherName = weatherName;
+        this.weatherIcon = weatherIcon;
     }
 
-    public String getCityName() {
+    String getCityName() {
         return this.cityName;
     }
 
-    String getHourBegin() {
-        return this.hourBegin;
+    String getDateBegin() {
+        return this.dateBegin;
+    }
+
+    String getDateBeginFormatted() {
+        return Bloc.DTF.format(BlocSQLiteContract.parseToDate(this.dateBegin));
     }
 
     double getTemperature() {
         return this.temperature;
     }
 
-    public String getWeather() {
-        return this.weather;
+    String getWeatherName() {
+        return this.weatherName;
     }
 
-    public String getIcon() {
-        return this.icon;
-    }
-
-    boolean isCold() {
-        return this.temperature <= Bloc.COLD_THRESHOLD;
+    String getWeatherIcon() {
+        return this.weatherIcon;
     }
 }

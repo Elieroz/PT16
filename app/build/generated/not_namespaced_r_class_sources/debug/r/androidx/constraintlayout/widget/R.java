@@ -74,8 +74,8 @@ public final class R {
         private id() {}
 
         public static final int bottom = 0x7f090046;
-        public static final int end = 0x7f090067;
-        public static final int gone = 0x7f090075;
+        public static final int end = 0x7f090068;
+        public static final int gone = 0x7f090076;
         public static final int invisible = 0x7f090081;
         public static final int left = 0x7f090086;
         public static final int packed = 0x7f09009e;
@@ -86,7 +86,7 @@ public final class R {
         public static final int spread_inside = 0x7f0900d2;
         public static final int start = 0x7f0900d7;
         public static final int top = 0x7f0900f6;
-        public static final int wrap = 0x7f090106;
+        public static final int wrap = 0x7f090107;
     }
     public static final class styleable {
         private styleable() {}

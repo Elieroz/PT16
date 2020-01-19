@@ -28,11 +28,11 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
         return Math.round(num * 100.0) / 100.0;
     }
 
-    static double kelvinToCelsius(double temperature) {
+    private static double kelvinToCelsius(double temperature) {
         return BlocAdapter.roundToTwoXifres(temperature - 273.15);
     }
 
-    static double kelvinToFahrenheit(double temperature) {
+    private static double kelvinToFahrenheit(double temperature) {
         return BlocAdapter.roundToTwoXifres(9.0/5.0 * (temperature - 273.15) + 32);
     }
 
@@ -66,7 +66,7 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
             unit = " F";
         }
 
-        holder.hourBegin.setText(bloc.getHourBegin());
+        holder.dateBegin.setText(bloc.getDateBeginFormatted());
         holder.temperature.setText(
                 String.format("%s%s", temperature, unit)
         );
@@ -74,10 +74,10 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
         Picasso.get()
                 .load(
                 "http://openweathermap.org/img/wn/"
-                    + bloc.getIcon()
+                    + bloc.getWeatherIcon()
                     + "@2x.png"
                 )
-                .into(holder.icon)
+                .into(holder.weatherIcon)
         ;
     }
 
@@ -87,16 +87,16 @@ public class BlocAdapter extends RecyclerView.Adapter<BlocAdapter.BlocViewHolder
     }
 
     static class BlocViewHolder extends RecyclerView.ViewHolder {
-        TextView hourBegin;
+        TextView dateBegin;
         TextView temperature;
-        ImageView icon;
+        ImageView weatherIcon;
 
         BlocViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            this.hourBegin = itemView.findViewById(R.id.hourBegin);
+            this.dateBegin = itemView.findViewById(R.id.dateBegin);
             this.temperature = itemView.findViewById(R.id.temperature);
-            this.icon = itemView.findViewById(R.id.icon);
+            this.weatherIcon = itemView.findViewById(R.id.weatherIcon);
         }
     }
 }

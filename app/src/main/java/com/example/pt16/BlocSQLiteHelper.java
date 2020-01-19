@@ -10,29 +10,27 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TemperaturesHelper extends SQLiteOpenHelper {
+public class BlocSQLiteHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "MyOpenWeather.db";
 
-    TemperaturesHelper(Context context) {
-        // TODO Versió? Ni idea de què vol dir.
+    BlocSQLiteHelper(Context context) {
         super(
                 context,
-                TemperaturesHelper.DATABASE_NAME,
+                BlocSQLiteHelper.DATABASE_NAME,
                 null,
-                TemperaturesHelper.DATABASE_VERSION
+                BlocSQLiteHelper.DATABASE_VERSION
         );
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // TODO O sigui, onCreate és per quan
-        db.execSQL(SQLContract.CREATE_TABLE);
+        db.execSQL(BlocSQLiteContract.CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(SQLContract.DROP_TABLE);
+        db.execSQL(BlocSQLiteContract.DROP_TABLE);
         this.onCreate(db);
     }
 
@@ -46,9 +44,9 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor cursor = db.query(
-                SQLContract.TABLE_NAME,
-                new String[]{SQLContract.COL_NOM_CIUTAT},
-                SQLContract.COL_NOM_CIUTAT + " = ?",
+                BlocSQLiteContract.TABLE_NAME,
+                new String[]{BlocSQLiteContract.COL_NOM_CIUTAT},
+                BlocSQLiteContract.COL_NOM_CIUTAT + " = ?",
                 new String[]{nomCiutat},
                 null,
                 null,
@@ -62,19 +60,24 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
     boolean isCityInfoUpToDate(String cityName) {
         SQLiteDatabase db = this.getWritableDatabase();
 
+        String[] projection = {BlocSQLiteContract.COL_DATA_INICI};
+        String selection = BlocSQLiteContract.COL_NOM_CIUTAT + " = ?";
+        String[] selectionArgs = {cityName};
+        String orderBy = BlocSQLiteContract.COL_DATA_INICI + " ASC";
+
         Cursor cursor = db.query(
-                SQLContract.TABLE_NAME,
-                new String[]{SQLContract.COL_DATA_INICI},
-                SQLContract.COL_NOM_CIUTAT + " = ?",
-                new String[]{cityName},
+                BlocSQLiteContract.TABLE_NAME,
+                projection,
+                selection,
+                selectionArgs,
                 null,
                 null,
-                SQLContract.COL_DATA_INICI + " ASC"
+                orderBy
         );
 
         if (cursor.moveToNext()) {
             String dataIniciString = cursor.getString(0);
-            LocalDateTime dataInici = SQLContract.parseToDate(dataIniciString);
+            LocalDateTime dataInici = BlocSQLiteContract.parseToDate(dataIniciString);
 
             cursor.close();
             return dataInici.isAfter(LocalDateTime.now().minusMinutes(30));
@@ -90,56 +93,32 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
         for (Bloc bloc : blocs) {
             ContentValues values = new ContentValues();
 
-            values.put(SQLContract.COL_NOM_CIUTAT, bloc.getCityName());
-            values.put(SQLContract.COL_DATA_INICI, bloc.getHourBegin());
-            values.put(SQLContract.COL_TEMPERATURE, bloc.getTemperature());
-            values.put(SQLContract.COL_WEATHER, bloc.getWeather());
-            values.put(SQLContract.COL_ICON, bloc.getIcon());
+            values.put(BlocSQLiteContract.COL_NOM_CIUTAT, bloc.getCityName());
+            values.put(BlocSQLiteContract.COL_DATA_INICI, bloc.getDateBegin());
+            values.put(BlocSQLiteContract.COL_TEMPERATURE, bloc.getTemperature());
+            values.put(BlocSQLiteContract.COL_WEATHER, bloc.getWeatherName());
+            values.put(BlocSQLiteContract.COL_ICON, bloc.getWeatherIcon());
 
-            db.insert(SQLContract.TABLE_NAME, null, values);
+            db.insert(BlocSQLiteContract.TABLE_NAME, null, values);
         }
     }
-
-//    public List<Temp> llegeix(String nomCiutat) throws ParseException {
-//
-//        List<Temp> mostrar = new ArrayList<Temp>();
-//        Temp ciutat;
-//
-//        SQLiteDatabase db = this.getReadableDatabase();
-//
-//        String[] projection = {
-//                TemperaturesContract.NOMBRE_COLUMNA_NOMCIUTAT,
-//                TemperaturesContract.NOMBRE_COLUMNA_HORES,
-//                TemperaturesContract.NOMBRE_COLUMNA_TEMPS
-//
-//        };
-//
-//        String selection = TemperaturesContract.NOMBRE_COLUMNA_NOMCIUTAT + " = ?";
-//        String[] selectionArgs = {nomCiutat};
-//
-//          ...
-//
-//        return mostrar;
-//
-//    }
 
     ArrayList<Bloc> llegeix(String nomCiutat) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String[] projection = {
-//                SQLContract.COL_NOM_CIUTAT,
-                SQLContract.COL_DATA_INICI,
-                SQLContract.COL_TEMPERATURE,
-                SQLContract.COL_WEATHER,
-                SQLContract.COL_ICON
+                BlocSQLiteContract.COL_DATA_INICI,
+                BlocSQLiteContract.COL_TEMPERATURE,
+                BlocSQLiteContract.COL_WEATHER,
+                BlocSQLiteContract.COL_ICON
         };
 
-        String selection = SQLContract.COL_NOM_CIUTAT + " = ?";
+        String selection = BlocSQLiteContract.COL_NOM_CIUTAT + " = ?";
 
         String[] selectionArgs = {nomCiutat};
 
         Cursor cursor = db.query(
-                SQLContract.TABLE_NAME,
+                BlocSQLiteContract.TABLE_NAME,
                 projection,
                 selection,
                 selectionArgs,
@@ -153,7 +132,7 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
 //            String nomCiutat = cursor.getString(1);
             String dataInici = cursor.getString(0);
-            Double temperatura = cursor.getDouble(1);
+            double temperatura = cursor.getDouble(1);
             String weather = cursor.getString(2);
             String icon = cursor.getString(3);
 
@@ -175,8 +154,8 @@ public class TemperaturesHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         db.delete(
-                SQLContract.TABLE_NAME,
-                SQLContract.COL_NOM_CIUTAT + " = ?",
+                BlocSQLiteContract.TABLE_NAME,
+                BlocSQLiteContract.COL_NOM_CIUTAT + " = ?",
                 new String[]{cityName}
         );
     }
