@@ -34,9 +34,9 @@
             app:key="bloc_layout_mode"
             app:title="@string/bloc_layout_mode"
 
-            app:entries="@array/bloc_layout_modes"
-            app:entryValues="@array/bloc_layout_modes"
-            app:defaultValue="Compact"/>
+            app:entries="@array/bloc_layout_entries"
+            app:entryValues="@array/bloc_layout_values"
+            app:defaultValue="bloc_layout"/>
 
         <ListPreference
             app:key="temperature_unit"

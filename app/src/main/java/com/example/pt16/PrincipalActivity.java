@@ -49,21 +49,10 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         this.edtCity = findViewById(R.id.edtCity);
 
         this.btnLoadInfo = findViewById(R.id.btnSearch);
         this.btnLoadInfo.setOnClickListener(this);
-
-//        this.initializeBlocRecyclerView();
     }
 
     @Override
@@ -115,25 +104,14 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                 this.createBlocListFragment(blocs);
 
             } else {
-                Toast.makeText(this, "Dades desactualitzades, descarregant...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Dades desactualitzades; descarregant...", Toast.LENGTH_SHORT).show();
                 temperaturesHelper.deleteNotUpToDate(cityName);
                 this.downloadData(cityName);
             }
         } else {
-            Toast.makeText(this, "Dades no disponibles a la base de dades, descarregant...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Dades no disponibles a la base de dades; descarregant...", Toast.LENGTH_SHORT).show();
             this.downloadData(cityName);
         }
-
-//        if (temperaturesHelper.cityAvailableAndUpToDate(cityName)) {
-//            Toast.makeText(this, "Llegint de la base de dades... TODO", Toast.LENGTH_SHORT).show();
-//
-//            // TODO Al seu propi mètode?
-//            ArrayList<Bloc> blocs = temperaturesHelper.llegeix(cityName);
-//            this.createBlocListFragment(blocs);
-//        } else {
-//            Toast.makeText(this, "Realitzant petició de descàrrega...", Toast.LENGTH_SHORT).show();
-//            new PrincipalActivity.Descarregador(this).execute(cityName);
-//        }
     }
 
     private void downloadData(String cityName) {
@@ -164,12 +142,8 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             temperaturesHelper.guarda(blocs);
             Toast.makeText(this, "Operació realitzada ^_^", Toast.LENGTH_SHORT).show();
         } catch (XmlPullParserException | IOException e) {
-            Toast.makeText(this, "Error parsejant data (format " + downloadFormat + ")", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error parsing data (format " + downloadFormat + ")", Toast.LENGTH_LONG).show();
         }
-    }
-
-    private void onDataLoadedFromDatabase(ArrayList<Bloc> blocs) {
-
     }
 
     private void createBlocListFragment(ArrayList<Bloc> blocs) {
@@ -177,7 +151,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         String blocLayoutString = sharedPreferences.getString("bloc_layout_mode", "Compact");
 
         int blocLayout;
-        if (blocLayoutString.equals("Bigger")) {
+        if (blocLayoutString.equals("bloc_layout_alt")) {
             blocLayout = R.layout.bloc_layout_alt;
         } else {
             blocLayout = R.layout.bloc_layout;
@@ -196,9 +170,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         ;
     }
 
-    // TODO Boolean? Buenu, es pot fer un Progress Spinner mentre busca o algo.
-    // TODO Constructor amb Context context?
-    static class Descarregador extends AsyncTask<String, Boolean, Descarregador.Result> {
+    static class Descarregador extends AsyncTask<String, Void, Descarregador.Result> {
         // TODO Perquè la classe pugui ser estàtica i no tingui referències chungas de l'activitat.
         //  https://stackoverflow.com/questions/44309241/warning-this-asynctask-class-should-be-static-or-leaks-might-occur
         private WeakReference<PrincipalActivity> principalActivity;
@@ -229,8 +201,6 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             );
 
             try {
-                // TODO En comptes de London posar la ciutat, i en comptes d'uk posar...?
-                //  Ah, doncs només amb London funciona igual.
                 URL url = new URL(
                         "http://api.openweathermap.org/data/2.5/forecast?q="+ this.nomCiutat
                                 + "&mode=" + downloadFormat.toLowerCase()
@@ -270,8 +240,6 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this.principalActivity.get(), "Descàrrega OK, presentant info...", Toast.LENGTH_SHORT).show();
-//                Toast.makeText(this.principalActivity.get(), r.message, Toast.LENGTH_SHORT).show();
-//                this.principalActivity.get().onXmlDownloaded(this.nomCiutat, r.message);
                 this.principalActivity.get().onDataDownloaded(this.nomCiutat, r.message);
             }
         }

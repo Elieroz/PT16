@@ -4,9 +4,14 @@
         <item>JSON</item>
     </string-array>
 
-    <string-array name="bloc_layout_modes">
-        <item>Compact</item>
-        <item>Bigger</item>
+    <string-array name="bloc_layout_entries">
+        <item>Image at the right</item>
+        <item>Image at the left</item>
+    </string-array>
+
+    <string-array name="bloc_layout_values">
+        <item>bloc_layout</item>
+        <item>bloc_layout_alt</item>
     </string-array>
 
     <string-array name="temperature_unit_entries">
@@ -14,9 +19,4 @@
         <item>Kelvin</item>
         <item>Fahrenheit</item>
     </string-array>
-
-<!--    <string-array name="bloc_layout_values">-->
-<!--        <item>@layout/bloc_layout</item>-->
-<!--        <item>@layout/bloc_layout_alt</item>-->
-<!--    </string-array>-->
 </resources>

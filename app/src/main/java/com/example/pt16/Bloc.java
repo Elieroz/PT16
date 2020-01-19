@@ -32,10 +32,6 @@ class Bloc {
         return this.dateBegin;
     }
 
-//    String getDateBeginFormatted() {
-//        return Bloc.DTF.format(BlocSQLiteContract.parseToDate(this.dateBegin));
-//    }
-
     String getHourBegin() {
         return Bloc.DTF_HOUR.format(BlocSQLiteContract.parseToDate(this.dateBegin));
     }
