@@ -6,7 +6,7 @@
     <string name="download_format">Download format</string>
     <string name="_interface">Interface</string>
     <string name="bloc_layout_mode">Bloc layout mode</string>
-    <string name="temperature_unit">Degree unit</string>
+    <string name="temperature_unit">Temperature unit</string>
     <string name="reset_database">Reset database</string>
     <string name="city_name">City name</string>
 </resources>

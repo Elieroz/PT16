@@ -8,6 +8,6 @@
     <string name="_interface">Interfaz</string>
     <string name="bloc_layout_mode">Modo de \"layout\"</string>
     <string name="temperature_unit">Unidad de temperatura</string>
-    <string name="reset_database">Resetear base de datos</string>
+    <string name="reset_database">Vaciar la base de datos</string>
     <string name="city_name">Nombre de la ciudad</string>
 </resources>
